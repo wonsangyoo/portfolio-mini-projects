@@ -77,8 +77,8 @@
                   <nav>
                     <ul>
                       <li><a href="{% url 'portfolio' %}" class="highlight">Wonsang's Portfolio</a></li>
-                      {% if user.is_authenticated %}
                       <li><a href="{% url 'articles:list' %}" class="highlight">Furry Friends</a></li>
+                      {% if user.is_authenticated %}
                       <li>
                         <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
                           {% csrf_token %}
